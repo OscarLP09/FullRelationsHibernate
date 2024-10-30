@@ -39,16 +39,6 @@ public class Main {
 
 
 
-
-
-
-
-
-
-
-
-
-
         /*try(Session session = HibernateUtil.getSessionFactory().openSession()) { //Cuando trabajamos con metodos que nos devuelven cosas, por defecto usamos este
             studio1 = session.get(Studio.class, 1L);
        }
