@@ -29,6 +29,12 @@ public class Main {
             Query<Long> q1 = session.createQuery("select count(m) from Studio s join s.movies m where s.id=1", Long.class);
             System.out.println(q1.getSingleResult());
 
+            Query<Movie> q2 = session.createQuery("select a.movies from Actor a where a.id=1", Movie.class);
+            q2.list().forEach(System.out::println);
+
+            Query<Studio> q3 = session.createQuery("select s from Actor a join a.movies m join m.studio s where a.id=1", Studio.class);
+            q3.list().forEach(System.out::println);
+
         }
 
 
